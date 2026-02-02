@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Timer, Trophy, Bike, Flame, Activity } from 'lucide-react';
 import { useGame } from '../context/GameContext';
-import { Button } from '../components/ui/button';
+import { Button } from '../components/ui/Button';
 
 const SpinCyclePage = () => {
     const navigate = useNavigate();
@@ -98,8 +98,8 @@ const SpinCyclePage = () => {
                                     key={time}
                                     onClick={() => setTargetTime(time)}
                                     className={`w-full p-4 rounded-xl border flex justify-between items-center transition-all duration-300 ${targetTime === time
-                                            ? 'bg-green-500/20 border-green-500 text-green-400 shadow-[0_0_15px_rgba(34,197,94,0.3)]'
-                                            : 'bg-white/5 border-white/10 text-gray-400 hover:bg-white/10'
+                                        ? 'bg-green-500/20 border-green-500 text-green-400 shadow-[0_0_15px_rgba(34,197,94,0.3)]'
+                                        : 'bg-white/5 border-white/10 text-gray-400 hover:bg-white/10'
                                         }`}
                                 >
                                     <span className="font-bold text-xl">{time} MIN</span>

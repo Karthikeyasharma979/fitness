@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useGame } from '../context/GameContext';
-import { Button } from '../components/ui/button';
+import { Button } from '../components/ui/Button';
 import { ArrowLeft, Timer, Trophy, Flame, CheckCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 

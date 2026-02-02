@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { useGame } from '../context/GameContext';
-import { Button } from '../components/ui/button';
+import { Button } from '../components/ui/Button';
 import { ArrowLeft, Package, Shield, Sword, Zap, Sparkles, Star, Gift, Box } from 'lucide-react';
 
 const InventoryPage = () => {

@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { ArrowLeft, TrendingDown } from 'lucide-react';
 import { useGame } from '../context/GameContext';
-import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
+import { Button } from '../components/ui/Button';
+import { Input } from '../components/ui/Input';
 
 const ProgressPage = () => {
     const navigate = useNavigate();

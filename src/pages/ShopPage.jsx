@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { useGame } from '../context/GameContext';
-import { Button } from '../components/ui/button';
+import { Button } from '../components/ui/Button';
 import { ArrowLeft, Coins, ShoppingBag, Zap, Shield, Sword, Sparkles, Lock, AlertTriangle, Box, Skull, Heart, Gift } from 'lucide-react';
 
 const SHOP_ITEMS = [
