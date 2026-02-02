@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Button } from '../components/ui/button';
+import { Button } from '../components/ui/Button';
 import { useGame } from '../context/GameContext';
 
 const LandingPage = () => {

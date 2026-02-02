@@ -749,9 +749,6 @@ export const GameProvider = ({ children }) => {
         systemLogs,
         penalties,
         generateRedemptionQuest,
-        penalties,
-        generateRedemptionQuest,
-        generateRedemptionQuest,
         claimMysteryGift,
         completeDailyWorkout,
         dailyProgress
