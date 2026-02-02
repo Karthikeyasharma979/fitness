@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Outfit:wght@400;600;800&family=Teko:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@layer base {
+    :root {
+        --background: 240 10% 3.9%;
+        /* Darker, slightly blue-ish black */
+        --foreground: 0 0% 98%;
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+        --popover: 240 10% 3.9%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 190 100% 50%;
+        /* Electric Blue */
+        --primary-foreground: 240 5.9% 10%;
+        --secondary: 260 100% 60%;
+        /* Purple */
+        --secondary-foreground: 0 0% 98%;
+        /* ... other vars ... */
+    }
+}
+
+@layer utilities {
+    .font-anime {
+        font-family: 'Teko', sans-serif;
+    }
+
+    .system-window {
+        background: linear-gradient(180deg, rgba(0, 20, 40, 0.9) 0%, rgba(0, 10, 20, 0.95) 100%);
+        border: 2px solid #00f0ff;
+        box-shadow: 0 0 20px rgba(0, 240, 255, 0.2), inset 0 0 20px rgba(0, 240, 255, 0.1);
+        position: relative;
+    }
+
+    .system-window::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: 20px;
+        right: 20px;
+        height: 2px;
+        background: #00f0ff;
+        box-shadow: 0 0 10px #00f0ff;
+    }
+
+    .hex-badge {
+        width: 60px;
+        height: 68px;
+        background-color: rgba(30, 30, 30, 0.8);
+        border: 1px solid #333;
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+
+    .hex-badge.active {
+        border-color: #00f0ff;
+        background-color: rgba(0, 240, 255, 0.1);
+        box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Outfit', sans-serif;
+    }
+}
+
+@layer utilities {
+    .glass {
+        background-color: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .glass-card {
+        background-color: rgba(255, 255, 255, 0.05);
+        /* Using the base card color directly */
+        backdrop-filter: blur(24px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+
+    .text-neon-blue {
+        text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+    }
+
+    .text-neon-purple {
+        text-shadow: 0 0 10px #7000ff, 0 0 20px #7000ff;
+    }
+
+    .box-glow {
+        box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+    }
+
+    /* Solo Leveling / System Interface Animations */
+    @keyframes glitch {
+        0% {
+            transform: translate(0);
+        }
+
+        20% {
+            transform: translate(-2px, 2px);
+        }
+
+        40% {
+            transform: translate(-2px, -2px);
+        }
+
+        60% {
+            transform: translate(2px, 2px);
+        }
+
+        80% {
+            transform: translate(2px, -2px);
+        }
+
+        100% {
+            transform: translate(0);
+        }
+    }
+
+    .animate-glitch {
+        animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+    }
+
+    .hover-glitch:hover {
+        animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+    }
+
+    @keyframes system-pulse {
+
+        0%,
+        100% {
+            box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+            opacity: 1;
+        }
+
+        50% {
+            box-shadow: 0 0 20px #00f0ff, 0 0 40px #00f0ff;
+            opacity: 0.8;
+        }
+    }
+
+    .animate-system-pulse {
+        animation: system-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    /* Enhanced Anime Animations */
+    @keyframes slide-in-right {
+        0% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    .animate-slide-in-right {
+        animation: slide-in-right 0.5s ease-out forwards;
+    }
+
+    @keyframes aura-pulse {
+        0% {
+            box-shadow: 0 0 0 0px rgba(0, 240, 255, 0.7);
+        }
+
+        100% {
+            box-shadow: 0 0 0 20px rgba(0, 240, 255, 0);
+        }
+    }
+
+    .animate-aura {
+        animation: aura-pulse 2s infinite;
+    }
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .border-neon {
+        border: 1px solid #00f0ff;
+        box-shadow: 0 0 5px #00f0ff, inset 0 0 5px #00f0ff;
+    }
+
+    .text-shadow-glow {
+        text-shadow: 0 0 10px currentColor;
+    }
+
+    .clip-path-hexagon {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+}
+
+/* Global Scanline Effect (Optional overlay) */
+.scanlines::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+}
